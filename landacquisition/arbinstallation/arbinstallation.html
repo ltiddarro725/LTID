@@ -55,6 +55,7 @@
       font-size: 2.5vw;
       color: #000000;
       text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+      min-height: 50vh; /* optional: vertically center in page */
     }
     btnlft {
       padding: 20px;
@@ -116,32 +117,56 @@
     }
 
     @media (max-width: 768px) {
-      .subtitle, .subtext, main, .nav-button {
-        font-size: 5vw;
-      }
+  .subtitle, .subtext, main, .nav-button {
+    font-size: 5vw;
+  }
 
-      .logo {
-        height: 80px;
-      }
+  .logo {
+    height: 80px;
+  }
 
-      footer {
-        font-size: 3vw;
-      }
-    }
+  footer {
+    font-size: 3vw;
+  }
 
-    @media (max-width: 480px) {
-      .subtitle, .subtext, main, .nav-button {
-        font-size: 6vw;
-      }
+  /* ✅ Auto-fill height */
+  main {
+    min-height: 100vh; /* makes main fill the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers content vertically */
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
+  }
+}
 
-      .logo {
-        height: 60px;
-      }
+@media (max-width: 480px) {
+  .subtitle, .subtext, main, .nav-button {
+    font-size: 6vw;
+  }
 
-      footer {
-        font-size: 3.5vw;
-      }
-    }
+  .logo {
+    height: 60px;
+  }
+
+  footer {
+    font-size: 3.5vw;
+  }
+
+  /* ✅ Auto-fill height for smaller screens */
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
+  }
+}
   </style>
 </head>
 <body>
@@ -165,6 +190,7 @@
 
   <main>
     <h1>ARB INSTALLATION (CURRENT)</h1>
+    <a href="cy2025/cy2025.html" class="nav-button">CY 2025</a>
     <a href="cy2026/cy2026.html" class="nav-button">CY 2026</a>
   </main>
 
